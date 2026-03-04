@@ -85,37 +85,39 @@
 
 ## Traceability
 
-*Populated during roadmap creation.*
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | — | Pending |
-| AUTH-02 | — | Pending |
-| AUTH-03 | — | Pending |
-| RATE-01 | — | Pending |
-| RATE-02 | — | Pending |
-| RATE-03 | — | Pending |
-| RATE-04 | — | Pending |
-| RATE-05 | — | Pending |
-| TRANS-01 | — | Pending |
-| TRANS-02 | — | Pending |
-| TRANS-03 | — | Pending |
-| TRANS-04 | — | Pending |
-| TRANS-05 | — | Pending |
-| TRANS-06 | — | Pending |
-| TRANS-07 | — | Pending |
-| DASH-01 | — | Pending |
-| DASH-02 | — | Pending |
-| DASH-03 | — | Pending |
-| DASH-04 | — | Pending |
-| PWA-01 | — | Pending |
-| PWA-02 | — | Pending |
+| AUTH-01 | Phase 2 | Pending |
+| AUTH-02 | Phase 2 | Pending |
+| AUTH-03 | Phase 2 | Pending |
+| RATE-01 | Phase 3 | Pending |
+| RATE-02 | Phase 3 | Pending |
+| RATE-03 | Phase 3 | Pending |
+| RATE-04 | Phase 3 | Pending |
+| RATE-05 | Phase 3 | Pending |
+| TRANS-01 | Phase 4 | Pending |
+| TRANS-02 | Phase 4 | Pending |
+| TRANS-03 | Phase 4 | Pending |
+| TRANS-04 | Phase 4 | Pending |
+| TRANS-05 | Phase 4 | Pending |
+| TRANS-06 | Phase 4 | Pending |
+| TRANS-07 | Phase 4 | Pending |
+| DASH-01 | Phase 5 | Pending |
+| DASH-02 | Phase 5 | Pending |
+| DASH-03 | Phase 5 | Pending |
+| DASH-04 | Phase 5 | Pending |
+| PWA-01 | Phase 6 | Pending |
+| PWA-02 | Phase 6 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 21 ⚠️
+- Mapped to phases: 21
+- Unmapped: 0
+
+**Phase mapping notes:**
+- Phase 1 (Foundation) has no direct requirement assignments — it delivers the backend infrastructure (schema, rate aggregator, cron, pooler connection) that all other phases depend on. Its success criteria are infrastructure-observable, not user-observable. RATE-01..04 are assigned to Phase 3 where users can first see rates displayed.
+- All 21 v1 requirements are covered. Phase 1 existence is justified by architectural necessity (non-retrofittable schema decisions), not by a mapped requirement.
 
 ---
 *Requirements defined: 2026-03-04*
-*Last updated: 2026-03-04 after initial definition*
+*Last updated: 2026-03-04 after roadmap creation*
