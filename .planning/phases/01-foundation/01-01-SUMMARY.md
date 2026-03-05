@@ -177,6 +177,18 @@ Before Task 2 (Vercel deployment) can proceed, the user must:
 - Tests pass locally — ready for CI once Vercel env vars are set
 - Blocked on: Vercel deployment and Supabase project creation (human task)
 
+## Self-Check: PASSED
+
+- FOUND: src/lib/supabase/server.ts
+- FOUND: src/lib/supabase/client.ts
+- FOUND: vercel.json
+- FOUND: vitest.config.ts
+- FOUND: src/tests/supabase-client.test.ts
+- FOUND: components.json
+- FOUND: src/components/ui/button.tsx
+- FOUND commit: b011563 (TDD RED)
+- FOUND commit: cd33721 (TDD GREEN / full scaffold)
+
 ---
 *Phase: 01-foundation*
 *Completed: 2026-03-05*
