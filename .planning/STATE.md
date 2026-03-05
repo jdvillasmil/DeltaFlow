@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 ## Current Position
 
 Phase: 1 of 6 (Foundation)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-04 — Roadmap created; 21 v1 requirements mapped across 6 phases
+Plan: 2 of 3 in current phase
+Status: In progress
+Last activity: 2026-03-05 — Plan 01-02 executed (schema migration + TS types); awaiting human-verify checkpoint for Task 2
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██░░░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: — min
-- Total execution time: 0 hours
+- Total plans completed: 1 (01-02 partial — Task 1 complete, Task 2 awaiting human-verify)
+- Average duration: 7 min
+- Total execution time: 0.12 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1 of 3 | 7 min | 7 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: 01-02 (7 min)
 - Trend: —
 
 *Updated after each plan completion*
@@ -47,6 +47,10 @@ Recent decisions affecting current work:
 - [Pre-build]: Supabase pooler port 6543 mandatory — direct port 5432 exhausts free-tier connections in serverless
 - [Pre-build]: NUMERIC(24,8) for all financial columns — IEEE 754 float drift is unacceptable in financial data
 - [Pre-build]: Client-generated UUID (client_id UNIQUE) on transactions — enables idempotent offline sync retries
+- [01-02]: NUMERIC(24, 8) for all financial columns confirmed in migration — enforced by automated schema test
+- [01-02]: RLS on transactions only; exchange_rates are public read — no RLS
+- [01-02]: TypeScript NUMERIC fields are string type — Supabase JS client returns NUMERIC as string, not number
+- [01-02]: rate_at_time stored immutably on transactions — historical VES values never recalculated from current rates
 
 ### Pending Todos
 
@@ -62,6 +66,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04
-Stopped at: Roadmap created, STATE.md initialized — ready to begin /gsd:plan-phase 1
+Last session: 2026-03-05
+Stopped at: Plan 01-02 Task 1 complete (schema migration + TS types, 10 tests passing). Task 2 is checkpoint:human-verify — apply migration to live Supabase project.
 Resume file: None

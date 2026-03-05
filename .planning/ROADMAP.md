@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [ ] 01-01-PLAN.md — Next.js 15 scaffold (TypeScript, Tailwind v4, shadcn/ui), Supabase clients with pooler URL, Vitest setup, Vercel deployment
-- [ ] 01-02-PLAN.md — Supabase schema: exchange_rates and transactions tables, NUMERIC(24,8), UUID UNIQUE client_id, RLS policies
+- [x] 01-02-PLAN.md — Supabase schema: exchange_rates and transactions tables, NUMERIC(24,8), UUID UNIQUE client_id, RLS policies (Task 1 complete; Task 2 awaiting human-verify: apply migration to live Supabase)
 - [ ] 01-03-PLAN.md — Rate aggregator: BCV scraper (cheerio), dolarapi.com parallel rate, CoinGecko BTC/ETH, Supabase upsert, Edge Function hourly cron
 
 ### Phase 2: Authentication
