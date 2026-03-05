@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 Phase: 1 of 6 (Foundation)
 Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-03-05 — Plan 01-02 executed (schema migration + TS types); awaiting human-verify checkpoint for Task 2
+Last activity: 2026-03-05 — Plan 01-01 executed (Next.js 15 scaffold, Supabase clients, Vitest, shadcn/ui); Task 1 complete, Task 2 is checkpoint:human-verify for Vercel deployment
 
 Progress: [██░░░░░░░░] 20%
 
@@ -47,6 +47,9 @@ Recent decisions affecting current work:
 - [Pre-build]: Supabase pooler port 6543 mandatory — direct port 5432 exhausts free-tier connections in serverless
 - [Pre-build]: NUMERIC(24,8) for all financial columns — IEEE 754 float drift is unacceptable in financial data
 - [Pre-build]: Client-generated UUID (client_id UNIQUE) on transactions — enables idempotent offline sync retries
+- [01-01]: vitest v4 has no envFile config option — setup.ts manually loads .env.local for local test runs
+- [01-01]: force-dynamic on /api/health prevents static caching of keep-alive response
+- [01-01]: shadcn/ui initialized with Slate style + CSS variables (default)
 - [01-02]: NUMERIC(24, 8) for all financial columns confirmed in migration — enforced by automated schema test
 - [01-02]: RLS on transactions only; exchange_rates are public read — no RLS
 - [01-02]: TypeScript NUMERIC fields are string type — Supabase JS client returns NUMERIC as string, not number
@@ -67,5 +70,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-05
-Stopped at: Plan 01-02 Task 1 complete (schema migration + TS types, 10 tests passing). Task 2 is checkpoint:human-verify — apply migration to live Supabase project.
+Stopped at: Plan 01-01 Task 1 complete (Next.js 15 scaffold, pooler URL TDD tests GREEN). Task 2 is checkpoint:human-verify — deploy to Vercel with real Supabase credentials.
 Resume file: None
