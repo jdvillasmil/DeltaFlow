@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: "Plan 01-03 Tasks 1-2 complete (rate aggregator, tests pass, build passes). Task 3 is checkpoint:human-verify — deploy to Vercel, trigger /api/rates/refresh, verify Supabase rows"
+last_updated: "2026-03-06T16:05:11.637Z"
+last_activity: "2026-03-05 — Plan 01-01 executed (Next.js 15 scaffold, Supabase clients, Vitest, shadcn/ui); Task 1 complete, Task 2 is checkpoint:human-verify for Vercel deployment"
+progress:
+  total_phases: 6
+  completed_phases: 1
+  total_plans: 3
+  completed_plans: 3
+  percent: 100
+---
+
 # Project State
 
 ## Project Reference
@@ -14,7 +30,7 @@ Plan: 2 of 3 in current phase
 Status: In progress
 Last activity: 2026-03-05 — Plan 01-01 executed (Next.js 15 scaffold, Supabase clients, Vitest, shadcn/ui); Task 1 complete, Task 2 is checkpoint:human-verify for Vercel deployment
 
-Progress: [██░░░░░░░░] 20%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -34,6 +50,7 @@ Progress: [██░░░░░░░░] 20%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-foundation P03 | 6 | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -54,6 +71,11 @@ Recent decisions affecting current work:
 - [01-02]: RLS on transactions only; exchange_rates are public read — no RLS
 - [01-02]: TypeScript NUMERIC fields are string type — Supabase JS client returns NUMERIC as string, not number
 - [01-02]: rate_at_time stored immutably on transactions — historical VES values never recalculated from current rates
+- [Phase 01-foundation]: BCV selector confirmed live on 2026-03-06: div#dolar strong — rate was 431.01130000 VES/USD
+- [Phase 01-foundation]: dolarapi.com used for parallel USD/VES rate — USDTVES does not exist on Binance spot market
+- [Phase 01-foundation]: Supabase Edge Function cron (not Vercel) for hourly refresh — Vercel Hobby is daily-only
+- [Phase 01-foundation]: server-only package mocked in vitest — throws outside Next.js server context
+- [Phase 01-foundation]: supabase/ excluded from tsconfig.json — Deno types incompatible with Next.js TypeScript compilation
 
 ### Pending Todos
 
@@ -69,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05
-Stopped at: Plan 01-01 Task 1 complete (Next.js 15 scaffold, pooler URL TDD tests GREEN). Task 2 is checkpoint:human-verify — deploy to Vercel with real Supabase credentials.
+Last session: 2026-03-06T16:05:11.634Z
+Stopped at: Plan 01-03 Tasks 1-2 complete (rate aggregator, tests pass, build passes). Task 3 is checkpoint:human-verify — deploy to Vercel, trigger /api/rates/refresh, verify Supabase rows
 Resume file: None

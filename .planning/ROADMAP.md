@@ -12,7 +12,7 @@ DeltaFlow is built in six phases that respect a strict technical dependency chai
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Project scaffold, Supabase schema with RLS, and rate aggregator infrastructure
+- [x] **Phase 1: Foundation** - Project scaffold, Supabase schema with RLS, and rate aggregator infrastructure (completed 2026-03-06)
 - [ ] **Phase 2: Authentication** - Magic link auth flow, session persistence, and auth-gated routing
 - [ ] **Phase 3: Exchange Rates** - Rate display UI with BCV, dolarapi.com parallel, CoinGecko, hourly refresh, and source transparency
 - [ ] **Phase 4: Transactions** - Full transaction CRUD with multi-currency entry, categories, payment methods, and history
@@ -123,7 +123,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-03-06 |
 | 2. Authentication | 0/2 | Not started | - |
 | 3. Exchange Rates | 0/2 | Not started | - |
 | 4. Transactions | 0/3 | Not started | - |
